@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="google-site-verification" content="YRdijnzZT4heBNIc4aB82fear0x-SDXSufemrBv7jp4" />
+    <!-- Primary Meta Tags -->
+    <title>TREND IS FRIEND - Live Trading Signals | Forex, Crypto, Commodities & Indices</title>
+    <meta name="title" content="TREND IS FRIEND - Live Trading Signals | Forex, Crypto, Commodities & Indices" />
+    <meta name="description" content="Get real-time trading signals for Forex, Crypto, Commodities, and Indices. Professional analysis, high accuracy, instant notifications. Start your 8-day free trial today!" />
+    <meta name="keywords" content="trading signals, forex signals, crypto signals, commodities trading, indices signals, live trading, buy sell signals, trading analysis, technical analysis, trading alerts, XAUUSD, gold signals, bitcoin signals" />
+    <meta name="author" content="TREND IS FRIEND" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+
+<meta name="google-adsense-account" content="ca-pub-1895906484640218">
+    
+
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1895906484640218"
+     crossorigin="anonymous"></script>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://live-signals29.vercel.app" />
+    <meta property="og:title" content="TREND IS FRIEND - Live Trading Signals | Real-time Chart Analysis" />
+    <meta property="og:description" content="Get real-time trading signals with professional chart analysis for Forex, Crypto, Commodities, and Indices. BUY/SELL signals with TP and SL levels. Start your 8-day free trial today!" />
+    <meta property="og:image" content="https://live-signals29.vercel.app/og-share-preview.jpg" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1008" />
+    <meta property="og:image:alt" content="TREND IS FRIEND - Professional Trading Chart Analysis with BUY Signal" />
+    <meta property="og:site_name" content="TREND IS FRIEND" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://live-signals29.vercel.app" />
+    <meta name="twitter:title" content="TREND IS FRIEND - Live Trading Signals | Real-time Chart Analysis" />
+    <meta name="twitter:description" content="Get real-time trading signals with professional chart analysis. BUY/SELL signals with TP and SL levels. Start your 8-day free trial!" />
+    <meta name="twitter:image" content="https://live-signals29.vercel.app/og-share-preview.jpg" />
+    <meta name="twitter:creator" content="@trendisfriend" />
+    <meta name="twitter:site" content="@trendisfriend" />
+    
+    <!-- Mobile Optimization -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="TREND IS FRIEND" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0EA5E9" />
+    <meta name="msapplication-TileColor" content="#0EA5E9" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png" />
+  </head>
+
+  <body>
+    <!-- Theme initialization script (prevents flash of unstyled content) -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+      })();
+    </script>
+    
+    <div id="root"></div>
+    <!-- Hidden mount point for Google Website Translator (drives 20+ language switching from the menu; our own UI hides its default toolbar via CSS) -->
+    <div id="google_translate_element" style="display:none"></div>
+    
+    <!-- Disable WebIntoApp exit popup -->
+    <script>
+      // Block WebIntoApp back button popup
+      document.addEventListener("backbutton", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }, true);
+      
+      // Additional override for Cordova/PhoneGap back button
+      document.addEventListener("deviceready", function() {
+        document.addEventListener("backbutton", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }, false);
+      }, false);
+    </script>
+    
+    <!-- Service Worker Registration with WebView fixes -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', async () => {
+          try {
+            // Unregister old service workers first to clear cache issues
+            const registrations = await navigator.serviceWorker.getRegistrations();
+            for (const registration of registrations) {
+              // Force update check
+              await registration.update();
+            }
+            
+            const registration = await navigator.serviceWorker.register('/service-worker.js', {
+              updateViaCache: 'none' // Prevent caching of service worker
+            });
+            
+            console.log('SW registered: ', registration);
+            
+            // Skip waiting and activate new service worker immediately
+            if (registration.waiting) {
+              registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+            }
+            
+            registration.addEventListener('updatefound', () => {
+              const newWorker = registration.installing;
+              if (newWorker) {
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    newWorker.postMessage({ type: 'SKIP_WAITING' });
+                  }
+                });
+              }
+            });
+          } catch (error) {
+            console.log('SW registration failed: ', error);
+          }
+        });
+        
+        // Handle controller change (new service worker activated)
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          // Don't reload in WebView to avoid loops
+          if (!window.isWebViewReloading) {
+            window.isWebViewReloading = true;
+            // Soft reload without full page refresh
+            console.log('New service worker activated');
+          }
+        });
+      }
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
